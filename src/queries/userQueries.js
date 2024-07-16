@@ -11,8 +11,14 @@ const getUserById = (id) => {
     return db.query(query, [id]);
 };
 
+const getUsers = () =>{
+    const query = 'SELECT * FROM users';
+    return db.query(query);
+}
+
 
 export const userQueries = {
     createUser,
     getUserById,
+    getUsers
 }

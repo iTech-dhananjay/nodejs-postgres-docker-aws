@@ -18,7 +18,17 @@ const getUserById = async (id) => {
     }
 };
 
+const getUsers = async () => {
+    try {
+        const users = await userQueries.getUsers()
+        return users
+    }catch (error) {
+        throw error;
+    }
+}
+
 export const userService = {
     createUser,
+    getUsers,
     getUserById,
 }
