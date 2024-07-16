@@ -1,17 +1,17 @@
-import pg from 'pg';
-const { Pool } = pg;
+import pkg from 'pg';
+const { Pool } = pkg;
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const pool = new Pool({
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
-    host: 'localhost', // Since PostgreSQL is running in the same Docker network
+    host: 'localhost', // Replace with your PostgreSQL host
     port: 5432,
     database: process.env.POSTGRES_DB,
 });
 
-// Test the database connection
 pool.connect((err, client, release) => {
     if (err) {
         console.error('Error connecting to the database:', err.stack);
