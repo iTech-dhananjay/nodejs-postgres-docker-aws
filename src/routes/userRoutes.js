@@ -20,6 +20,7 @@ router.get('/:id', async (req, res) => {
             res.status(404).json({ error: 'User not found' });
         }
     } catch (error) {
+        console.log(error,'test')
         res.status(500).json({ error: error.message });
     }
 });

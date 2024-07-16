@@ -3,13 +3,12 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import pool from './src/config/db.js';
 
-// Load environment variables from .env file
 dotenv.config();
 
 // Import routes
 import userRoutes from './src/routes/userRoutes.js';
-
 
 // Initialize Express app
 const app = express();

@@ -18,11 +18,6 @@ const getUserById = async (id) => {
     }
 };
 
-// module.exports = {
-//     createUser,
-//     getUserById,
-// };
-
 export const userService = {
     createUser,
     getUserById,
